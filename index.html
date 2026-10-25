@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Gelasio:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:#2f2e1e;color:#f3ecd2;-webkit-font-smoothing:antialiased}
+a{color:#e9dc9c;text-decoration:none}
+a:hover{color:#fff6cc}
+</style>
+</helmet>
+
+<div style="font-family:'Gelasio',Georgia,serif;background:#3d3b27;min-height:100vh">
+
+  <nav style="position:fixed;top:0;left:0;right:0;z-index:20;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px clamp(20px,4vw,56px);font-family:'Archivo',sans-serif;font-weight:700;font-size:11px;letter-spacing:0.28em;text-transform:uppercase;background:{{ navBg }};transition:background .3s">
+    <a href="#top" style="color:#efe3a8;letter-spacing:0.02em;font-size:18px;font-weight:800;text-transform:none">lbk.</a>
+    <div style="display:flex;gap:clamp(14px,3vw,40px);flex-wrap:wrap;justify-content:flex-end">
+      <a href="#videos" style="color:#f3ecd2">Portfolio</a>
+      <a href="#about" style="color:#f3ecd2">About</a>
+      <a href="#services" style="color:#f3ecd2">Services</a>
+      <a href="#contact" style="color:#f3ecd2">Contact</a>
+    </div>
+  </nav>
+
+  <header id="top" data-screen-label="Hero" style="position:relative;height:100vh;min-height:560px;overflow:hidden;background:#2a2919">
+    <div style="position:absolute;inset:0">
+      <image-slot id="hero-bg" shape="rect" src="./assets/hero.jpg" placeholder="Hero photo — you, full-bleed"></image-slot>
+    </div>
+    <div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(30,28,16,.45) 0%,rgba(30,28,16,0) 30%,rgba(30,28,16,0) 55%,rgba(30,28,16,.55) 100%)"></div>
+    <div style="position:absolute;left:0;right:0;bottom:14vh;display:flex;flex-direction:column;align-items:center;pointer-events:none;font-family:'Archivo',sans-serif;color:#efe3a8">
+      <div style="display:flex;flex-direction:column;align-items:flex-end;line-height:.82">
+        <h1 style="margin:0;font-weight:800;font-size:clamp(84px,15vw,220px);letter-spacing:-0.06em">lia</h1>
+        <div style="font-weight:700;font-size:clamp(20px,2.4vw,34px);letter-spacing:-0.03em;margin-top:10px">bagdoshvili-kiesow</div>
+      </div>
+      <div style="margin-top:22px;font-weight:700;font-size:12px;letter-spacing:0.34em;text-transform:uppercase">Content Creator · Lübeck, Germany</div>
+    </div>
+  </header>
+
+  <section id="about" data-screen-label="About" style="background:#e6d896;color:#26241a;padding:clamp(64px,10vw,130px) clamp(20px,6vw,96px)">
+    <div style="max-width:1160px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:clamp(40px,6vw,90px);align-items:center">
+      <div style="aspect-ratio:4/5;width:100%;box-shadow:0 30px 60px -30px rgba(40,36,10,.45);border-radius:10px;overflow:hidden">
+        <image-slot id="about-portrait" shape="rounded" radius="10" src="./assets/portrait.png" placeholder="Portrait of you"></image-slot>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:22px">
+        <div style="font-family:'Archivo',sans-serif;font-weight:700;font-size:11px;letter-spacing:0.34em">ABOUT</div>
+        <h2 style="margin:0;font-family:'Archivo',sans-serif;font-weight:800;font-size:clamp(44px,6vw,78px);letter-spacing:-0.055em;line-height:.95">hi, i’m lia.</h2>
+        <p style="margin:0;font-size:18px;line-height:1.6;max-width:480px;text-wrap:pretty">I’m a content creator and social media specialist who grew a beauty-focused community to 450,000+ followers across platforms.</p>
+        <p style="margin:0;font-size:18px;line-height:1.6;max-width:480px;text-wrap:pretty">With a degree in Journalism &amp; Communication and 3+ years on TikTok, I make authentic, relatable content — from product reviews to tutorials and trends — where creativity meets strategy.</p>
+        <div style="display:flex;gap:12px;margin-top:6px">
+          <a href="https://www.instagram.com/likakiesow/" target="_blank" rel="noopener" style="font-family:'Archivo',sans-serif;font-weight:700;font-size:12px;letter-spacing:.08em;color:#26241a;border:1.5px solid #26241a;border-radius:999px;padding:10px 18px" style-hover="background:#26241a;color:#e6d896">Instagram</a>
+          <a href="https://www.tiktok.com/@likakiesow" target="_blank" rel="noopener" style="font-family:'Archivo',sans-serif;font-weight:700;font-size:12px;letter-spacing:.08em;color:#26241a;border:1.5px solid #26241a;border-radius:999px;padding:10px 18px" style-hover="background:#26241a;color:#e6d896">TikTok</a>
+          <a href="https://de.linkedin.com/in/lia-bagdoshvili-kiesow-151b3b22a" target="_blank" rel="noopener" style="font-family:'Archivo',sans-serif;font-weight:700;font-size:12px;letter-spacing:.08em;color:#26241a;border:1.5px solid #26241a;border-radius:999px;padding:10px 18px" style-hover="background:#26241a;color:#e6d896">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+    <sc-if value="{{ showBrands }}" hint-placeholder-val="{{ true }}">
+      <div style="max-width:1160px;margin:clamp(64px,8vw,110px) auto 0;display:flex;flex-direction:column;align-items:center;gap:26px">
+        <div style="font-family:'Archivo',sans-serif;font-weight:700;font-size:11px;letter-spacing:0.34em;color:#5a5634">BRANDS I’VE WORKED WITH</div>
+        <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:clamp(24px,5vw,64px);font-family:'Archivo',sans-serif;font-weight:800;font-size:clamp(20px,2.4vw,28px);letter-spacing:-0.04em;color:#4a4628">
+          <span>julie &amp; grace</span><span>matica cosmetics</span><span>ella in love</span><span>fräulein brömse</span>
+        </div>
+      </div>
+    </sc-if>
+  </section>
+
+  <section id="services" data-screen-label="Services" style="background:#3d3b27;padding:clamp(72px,10vw,130px) clamp(20px,6vw,96px)">
+    <div style="max-width:1160px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:18px;text-align:center">
+      <div style="font-family:'Archivo',sans-serif;font-weight:700;font-size:11px;letter-spacing:0.34em;color:#cfc48e">SERVICES</div>
+      <h2 style="margin:0;font-family:'Archivo',sans-serif;font-weight:800;font-size:clamp(40px,5.6vw,72px);letter-spacing:-0.055em;color:#efe3a8;line-height:1">what i can do for you</h2>
+      <div style="width:100%;margin-top:56px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:clamp(36px,5vw,72px)">
+        <div style="display:flex;flex-direction:column;align-items:center;gap:20px">
+          <h3 style="margin:0;font-family:'Archivo',sans-serif;font-weight:700;font-size:28px;letter-spacing:-0.045em;line-height:1;color:#efe3a8">content<br>creation</h3>
+          <div style="width:64px;height:1.5px;background:#cfc48e"></div>
+          <p style="margin:0;font-size:17px;line-height:1.6;color:#e3dbbd;max-width:300px;text-wrap:pretty">Authentic short-form videos for TikTok, Reels and Stories — ideation, scripting, filming and editing.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:20px">
+          <h3 style="margin:0;font-family:'Archivo',sans-serif;font-weight:700;font-size:28px;letter-spacing:-0.045em;line-height:1;color:#efe3a8">social media<br>management</h3>
+          <div style="width:64px;height:1.5px;background:#cfc48e"></div>
+          <p style="margin:0;font-size:17px;line-height:1.6;color:#e3dbbd;max-width:300px;text-wrap:pretty">TikTok and Instagram strategies that build brand awareness, engagement and loyal communities.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:20px">
+          <h3 style="margin:0;font-family:'Archivo',sans-serif;font-weight:700;font-size:28px;letter-spacing:-0.045em;line-height:1;color:#efe3a8">brand presence<br>strategy</h3>
+          <div style="width:64px;height:1.5px;background:#cfc48e"></div>
+          <p style="margin:0;font-size:17px;line-height:1.6;color:#e3dbbd;max-width:300px;text-wrap:pretty">Amplify your brand’s presence with a clear content strategy — channel planning, campaign concepts and storytelling that builds trust and reach.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="videos" data-screen-label="Video examples" style="background:#34331f;padding:clamp(72px,9vw,120px) clamp(20px,4vw,56px)">
+    <div style="max-width:1280px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:18px">
+      <div style="font-family:'Archivo',sans-serif;font-weight:700;font-size:11px;letter-spacing:0.34em;color:#cfc48e">PORTFOLIO</div>
+      <h2 style="margin:0;font-family:'Archivo',sans-serif;font-weight:800;font-size:clamp(40px,5.6vw,72px);letter-spacing:-0.055em;color:#efe3a8;line-height:1">video examples</h2>
+      <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:18px 0 22px">
+        <sc-for list="{{ filters }}" as="f" hint-placeholder-count="6">
+          <button onClick="{{ f.onClick }}" style="font-family:'Archivo',sans-serif;font-weight:700;font-size:11px;letter-spacing:.2em;text-transform:uppercase;padding:10px 16px;border-radius:999px;cursor:pointer;border:1.5px solid #cfc48e;background:{{ f.bg }};color:{{ f.fg }};transition:all .2s">{{ f.label }}</button>
+        </sc-for>
+      </div>
+      <div style="width:100%;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,230px),1fr));gap:clamp(14px,2vw,24px)">
+        <sc-for list="{{ videos }}" as="v" hint-placeholder-count="10">
+          <div onMouseEnter="{{ v.onEnter }}" onMouseLeave="{{ v.onLeave }}" onDragOver="{{ v.onDragOver }}" onDrop="{{ v.onDrop }}" onClick="{{ v.onClick }}" style="position:relative;aspect-ratio:9/16;border-radius:14px;overflow:hidden;cursor:pointer;background:repeating-linear-gradient(135deg,#46442d 0 10px,#4b4931 10px 20px);box-shadow:0 20px 40px -24px rgba(0,0,0,.6);transition:transform .35s cubic-bezier(.2,.7,.2,1)" style-hover="transform:translateY(-6px)">
+            <sc-if value="{{ v.hasVideo }}">
+              {{ v.videoEl }}
+            </sc-if>
+            <sc-if value="{{ v.empty }}">
+              <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:20px;text-align:center;font-family:ui-monospace,Menlo,monospace;font-size:11px;line-height:1.5;color:#bdb38a">click or drop<br>a video (mp4/mov)</div>
+            </sc-if>
+            <div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(20,19,10,0) 55%,rgba(20,19,10,.7) 100%)"></div>
+            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:46px;height:46px;border-radius:50%;background:rgba(20,19,10,.55);backdrop-filter:blur(4px);display:flex;align-items:center;justify-content:center;pointer-events:none">
+              <div style="width:0;height:0;border-left:13px solid #f3ecd2;border-top:8px solid transparent;border-bottom:8px solid transparent;margin-left:4px"></div>
+            </div>
+            <div style="position:absolute;left:0;right:0;bottom:20px;display:flex;flex-direction:column;align-items:center;gap:6px;pointer-events:none;font-family:'Archivo',sans-serif;color:#f3ecd2">
+              <div style="font-weight:800;font-size:12px;letter-spacing:.26em">{{ v.cat }}</div>
+              <div style="font-weight:500;font-size:11px;letter-spacing:.18em">{{ v.sub }}</div>
+            </div>
+            <sc-if value="{{ v.hasVideo }}">
+              <button onClick="{{ v.onReplace }}" title="Replace video" style="position:absolute;top:10px;right:10px;font-family:'Archivo',sans-serif;font-weight:700;font-size:10px;letter-spacing:.14em;padding:6px 10px;border-radius:999px;border:none;background:rgba(20,19,10,.55);color:#f3ecd2;cursor:pointer">REPLACE</button>
+            </sc-if>
+          </div>
+        </sc-for>
+      </div>
+      <input type="file" accept="video/*" ref="{{ fileRef }}" onChange="{{ onFile }}" style="display:none">
+    </div>
+  </section>
+
+  <section id="photos" data-screen-label="Photo examples" style="background:#3d3b27;padding:clamp(72px,9vw,120px) clamp(20px,4vw,56px)">
+    <div style="max-width:1280px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:18px">
+      <div style="font-family:'Archivo',sans-serif;font-weight:700;font-size:11px;letter-spacing:0.34em;color:#cfc48e">PORTFOLIO</div>
+      <h2 style="margin:0 0 40px;font-family:'Archivo',sans-serif;font-weight:800;font-size:clamp(40px,5.6vw,72px);letter-spacing:-0.055em;color:#efe3a8;line-height:1">photo examples</h2>
+      <div style="width:100%;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,230px),1fr));gap:clamp(14px,2vw,24px)">
+        <sc-for list="{{ photos }}" as="p" hint-placeholder-count="10">
+          <div style="aspect-ratio:3/4;border-radius:14px;overflow:hidden;box-shadow:0 20px 40px -24px rgba(0,0,0,.6);transition:transform .35s cubic-bezier(.2,.7,.2,1)" style-hover="transform:translateY(-6px)">
+            <image-slot id="{{ p.id }}" shape="rounded" radius="14" src="{{ p.src }}" placeholder="{{ p.label }}"></image-slot>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" data-screen-label="Contact" style="position:relative;min-height:88vh;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#2a2919">
+    <div style="position:absolute;inset:0">
+      <image-slot id="contact-bg" shape="rect" src="./assets/contact.png" placeholder="Contact background — you at work"></image-slot>
+    </div>
+    <div style="position:absolute;inset:0;pointer-events:none;background:rgba(32,28,18,.5)"></div>
+    <div style="position:relative;pointer-events:none;display:flex;flex-direction:column;align-items:center;gap:20px;text-align:center;padding:80px 24px;color:#efe3a8">
+      <div style="font-family:'Archivo',sans-serif;font-weight:700;font-size:11px;letter-spacing:0.34em">CONTACT</div>
+      <h2 style="margin:0;font-family:'Archivo',sans-serif;font-weight:800;font-size:clamp(64px,10vw,140px);letter-spacing:-0.06em;line-height:.9">let’s work</h2>
+      <p style="margin:0;font-size:19px;line-height:1.55;max-width:520px;color:#f3ecd2;text-wrap:pretty">Ready to elevate your brand’s social presence? Get in touch to discuss custom content packages and availability.</p>
+      <a href="mailto:itzamelika@gmail.com" style="pointer-events:auto;margin-top:14px;font-family:'Archivo',sans-serif;font-weight:700;font-size:13px;letter-spacing:.3em;color:#26241a;background:#efe3a8;padding:16px 28px;border-radius:999px" style-hover="background:#fff6cc;color:#26241a">ITZAMELIKA@GMAIL.COM</a>
+      <div style="pointer-events:auto;display:flex;gap:22px;font-family:'Archivo',sans-serif;font-weight:700;font-size:11px;letter-spacing:.24em;margin-top:6px">
+        <a href="https://www.instagram.com/likakiesow/" target="_blank" rel="noopener">INSTAGRAM</a><a href="https://www.tiktok.com/@likakiesow" target="_blank" rel="noopener">TIKTOK</a><a href="https://de.linkedin.com/in/lia-bagdoshvili-kiesow-151b3b22a" target="_blank" rel="noopener">LINKEDIN</a>
+      </div>
+    </div>
+  </section>
+
+  <sc-if value="{{ lightboxOpen }}">
+    <div onClick="{{ closeLightbox }}" style="position:fixed;inset:0;z-index:50;background:rgba(18,17,10,.92);display:flex;align-items:center;justify-content:center;padding:4vh 4vw">
+      {{ lightboxVideo }}
+      <button onClick="{{ closeLightbox }}" style="position:absolute;top:20px;right:24px;font-family:'Archivo',sans-serif;font-weight:700;font-size:11px;letter-spacing:.24em;background:none;border:1.5px solid #efe3a8;color:#efe3a8;padding:10px 16px;border-radius:999px;cursor:pointer">CLOSE</button>
+    </div>
+  </sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;hoverAutoplay&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;},&quot;showBrands&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;}}">
+const VIDEOS = [
+  ['talking · german','Talking Video · DE'],['talking · german','Talking Video · DE'],
+  ['talking · english','Talking Video · EN'],['talking · english','Talking Video · EN'],
+  ['trendy','Trend Video'],['trendy','Trend Video'],
+  ['product demo','Product Demonstration'],['product demo','Product Demonstration'],
+  ['promotional','Promotional Video'],['promotional','Promotional Video']
+];
+const PHOTO_SRC = ["./assets/photos/photo-1.jpg","./assets/photos/photo-2.jpg","./assets/photos/photo-3.png","./assets/photos/photo-4.png","./assets/photos/photo-5.png","./assets/photos/photo-6.png","./assets/photos/photo-7.png","./assets/photos/photo-8.png","./assets/photos/photo-9.png","./assets/photos/photo-10.png"];
+const PHOTOS = ["Beauty flat lay","What’s in my bag","Lip care","Gisou products","Brand packaging","Rhode × coffee","LED mask routine","The Ordinary unboxing","Skincare moment","Pocket essentials"];
+const SRC = { 'video-0': './assets/videos/video-1.mp4', 'video-1': './assets/videos/video-2.mp4', 'video-2': './assets/videos/en-1.mp4', 'video-3': './assets/videos/en-2.mp4', 'video-4': './assets/videos/video-3.mp4', 'video-5': './assets/videos/trend-2.mp4', 'video-6': './assets/videos/demo-1.mp4', 'video-7': './assets/videos/demo-2.mp4', 'video-8': './assets/videos/video-4.mp4', 'video-9': './assets/videos/promo-2.mp4' };
+const DB = 'ugc-portfolio-videos';
+function idb() {
+  return new Promise((res, rej) => {
+    const r = indexedDB.open(DB, 1);
+    r.onupgradeneeded = () => r.result.createObjectStore('v');
+    r.onsuccess = () => res(r.result); r.onerror = () => rej(r.error);
+  });
+}
+async function put(k, file) { const buf = await file.arrayBuffer(); const d = await idb(); d.transaction('v','readwrite').objectStore('v').put(new Blob([buf], { type: file.type }), k); }
+async function getAll() {
+  const d = await idb();
+  return new Promise(res => {
+    const out = {}; const st = d.transaction('v').objectStore('v').openCursor();
+    st.onsuccess = e => { const c = e.target.result; if (c) { out[c.key] = c.value; c.continue(); } else res(out); };
+    st.onerror = () => res(out);
+  });
+}
+
+class Component extends DCLogic {
+  state = { urls: {}, filter: 'all', lightbox: null, scrolled: false };
+  fileRef = React.createRef();
+  target = null;
+
+  async componentDidMount() {
+    this.onScroll = () => { const s = window.scrollY > 40; if (s !== this.state.scrolled) this.setState({ scrolled: s }); };
+    window.addEventListener('scroll', this.onScroll);
+    try {
+      const all = await getAll(); const urls = {};
+      for (const k in all) { try { await all[k].slice(0, 1).arrayBuffer(); urls[k] = URL.createObjectURL(all[k]); } catch (err) {} }
+      this.setState({ urls });
+    } catch (e) {}
+    for (const k in SRC) {
+      if (this.state.urls[k]) continue;
+      fetch(SRC[k]).then(r => r.ok ? r.blob() : null).then(b => {
+        if (b && !this.state.urls[k]) this.setState(s => ({ urls: { ...s.urls, [k]: URL.createObjectURL(new Blob([b], { type: 'video/mp4' })) } }));
+      }).catch(() => {});
+    }
+  }
+  componentWillUnmount() { window.removeEventListener('scroll', this.onScroll); }
+
+  save(key, file) {
+    if (!file || !file.type.startsWith('video')) return;
+    put(key, file).catch(() => {});
+    this.setState(s => ({ urls: { ...s.urls, [key]: URL.createObjectURL(file) } }));
+  }
+  pick(key) { this.target = key; this.fileRef.current && this.fileRef.current.click(); }
+
+  renderVals() {
+    const { urls, filter, lightbox, scrolled } = this.state;
+    const hover = this.props.hoverAutoplay ?? true;
+    const cats = ['all', ...new Set(VIDEOS.map(v => v[0]))];
+    const videos = VIDEOS.map(([cat, sub], i) => ({ key: 'video-' + i, cat, sub }))
+      .filter(v => filter === 'all' || v.cat === filter)
+      .map(v => {
+        const url = urls[v.key];
+        return {
+          cat: v.cat.toUpperCase(), sub: v.sub,
+          videoEl: url ? React.createElement('video', { src: url, muted: true, loop: true, playsInline: true, preload: 'auto', onLoadedMetadata: e => { try { e.currentTarget.currentTime = 0.1; } catch (x) {} }, style: { position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' } }) : null, hasVideo: !!url, empty: !url,
+          onClick: () => url ? this.setState({ lightbox: url }) : this.pick(v.key),
+          onReplace: e => { e.stopPropagation(); this.pick(v.key); },
+          onEnter: e => { const el = e.currentTarget.querySelector('video'); if (hover && el) el.play().catch(() => {}); },
+          onLeave: e => { const el = e.currentTarget.querySelector('video'); if (el) { el.pause(); el.currentTime = 0; } },
+          onDragOver: e => e.preventDefault(),
+          onDrop: e => { e.preventDefault(); this.save(v.key, e.dataTransfer.files[0]); }
+        };
+      });
+    return {
+      navBg: scrolled ? 'rgba(52,51,31,.92)' : 'transparent',
+      showBrands: this.props.showBrands ?? true,
+      filters: cats.map(c => ({
+        label: c, onClick: () => this.setState({ filter: c }),
+        bg: filter === c ? '#efe3a8' : 'transparent', fg: filter === c ? '#26241a' : '#efe3a8'
+      })),
+      videos,
+      photos: PHOTOS.map((label, i) => ({ id: 'photo-' + i, label, src: PHOTO_SRC[i] })),
+      fileRef: this.fileRef,
+      onFile: e => { if (this.target) this.save(this.target, e.target.files[0]); e.target.value = ''; },
+      lightboxOpen: !!lightbox,
+      lightboxVideo: lightbox ? React.createElement('video', { src: lightbox, controls: true, autoPlay: true, playsInline: true, onClick: e => e.stopPropagation(), style: { maxHeight: '88vh', maxWidth: '100%', borderRadius: 14, background: '#000' } }) : null,
+      closeLightbox: () => this.setState({ lightbox: null }),
+      stop: e => e.stopPropagation()
+    };
+  }
+}
+</script>
+</body>
+</html>
